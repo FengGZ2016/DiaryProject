@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_searth"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/diary_view_bg"
+    tools:context="com.example.administrator.diaryproject.ui.ActivitySearth">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:background="@mipmap/head_blue_background"
+        android:clickable="true" >
+
+        <ImageView
+            android:id="@+id/back_search_diary"
+            android:layout_width="54dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/edit_selector"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="日记搜索"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+     
+
+
+        <EditText
+            android:id="@+id/search_edit"
+            android:hint="searching..."
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/search" />
+
+
+    <com.example.administrator.diaryproject.ItemRemoveRecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/search_recycler_view"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </com.example.administrator.diaryproject.ItemRemoveRecyclerView>
+</LinearLayout>
